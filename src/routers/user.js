@@ -40,7 +40,7 @@ route.post('/users/logout',auth,async (req,res)=>{
 
         await req.user.save()
         res.send()
-    }catch{
+    }catch(e){
         res.status(500).send(e.message)
     }
 })
